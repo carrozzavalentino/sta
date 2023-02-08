@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Calcolo del dislivello Trekking </h1>
+<div class="inputstile">
+<label for="start">Altezza di partenza :</label><br>
+<input type="text" id="start" name="start"><br>
+<label for="stop">Altezza di arrivo:</label><br>
+<input type="text" id="stop" name="stop"><br><br>
+<button id="calcolo1" onclick="calcoladislivello()">Calcola dislivello di salita</button>
+</div>
+<div class="outputstile">
+<p>L'altezza di partenza è:</p>
+<p id="partenza"></p>
+<p>L'altezza di arrivo è:</p>
+<p id="arrivo"></p>
+<p>Il dislivello è:</p>
+<p id="cdislivello"></p>
+</div>
+
+<script>
+function calcoladislivello()
+{
+let start=0
+start=document.getElementById("start").value;
+document.getElementById("partenza").innerHTML=start;
+let stop=0;
+stop=document.getElementById("stop").value;
+document.getElementById("arrivo").innerHTML=stop;
+let dislivello=0;
+dislivello=stop-start;
+document.getElementById("cdislivello").innerHTML=dislivello;
+}
+</script>
+</body>
+</html>
