@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"&gt;
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script&gt;
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script&gt;
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script&gt;
+
+
+    <title>Converitore di valute</title>
+
+    <style>
+      #output{
+       
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Convertitore valute</h2>
+        <p>Inserisci gli euro da convertire.</p>
+     
+          <div class="form-group">
+            <label for="dato1">Valute</label>
+            <input type="text" class="form-control" id="dato1" name="dato1">
+           
+          </div>
+         
+        <button type="submit" onclick="convertitoreValuteUSD()" class="btn btn-primary">CalcolaUSD</button>
+        <div id="output">
+
+        <button type="submit" onclick="convertitoreValuteAUD()" class="btn btn-primary">CalcolaAUD</button>
+        <div id="output">
+
+        <button type="submit" onclick="convertitoreValuteBRL()" class="btn btn-primary">CalcolaBRL</button>
+        <div id="output">
+                    
+        <button type="submit" onclick="convertitoreValuteCAD()" class="btn btn-primary">CalcolaCAD</button>
+        <div id="output">
+
+        <button type="submit" onclick="convertitoreValuteCHF()" class="btn btn-primary">CalcolaCHF</button>
+        <div id="output">
+
+        <button type="submit" onclick="convertitoreValuteCNY()" class="btn btn-primary">CalcolaCNY</button>
+        <div id="output">
+
+        <button type="submit" onclick="convertitoreValuteDKK()" class="btn btn-primary">CalcolaDKK</button>
+        <div id="output">
+
+        <button type="submit" onclick="convertitoreValuteGBP()" class="btn btn-primary">CalcolaGBP</button>
+        <div id="output">
+
+
+          </div>
+      </div>
+
+    <script>
+         function convertitoreValuteUSD() {
+
+            let EUR=0;
+            let USD=0;
+            EUR=document.getElementById("dato1").value;
+ 
+            USD= EUR *(1 / 1,06595)
+
+            alert("Valuta: "+USD,"");
+
+         }
+
+         function convertitoreValuteAUD() {
+
+         let EUR=0;
+         let AUD=0;
+         EUR=document.getElementById("dato1").value;
+
+         AUD= EUR * ( 1 / 1,57554)
+
+         alert("Valuta: "+AUD,"");
+
+         }
+
+        function convertitoreValuteBRL() {
+
+        let EUR=0;
+        let BRL=0;
+        EUR=document.getElementById("dato1").value;
+
+        BRL= EUR * (1 / 5,5753)
+
+        alert("Valuta: "+BRL,"");
+
+        }
+
+        function convertitoreValuteCAD() {
+
+        let EUR=0;
+        let CAD=0;
+        EUR=document.getElementById("dato1").value;
+
+        CAD= EUR * (1 / 1,44975)
+
+        alert("Valuta: "+CAD,"");
+
+        }
+
+        function convertitoreValuteCHF() {
+
+        let EUR=0;
+        let CHF=0;
+        EUR=document.getElementById("dato1").value;
+
+        CHF= EUR * (1 / 0,999)
+
+        alert("Valuta: "+CHF,"");
+
+        }
+
+        function convertitoreValuteCNY() {
+
+        let EUR=0;
+        let CNY=0;
+        EUR=document.getElementById("dato1").value;
+
+        CNY= EUR * (1 / 7,3239)
+
+        alert("Valuta: "+CNY,"");
+
+        }
+
+        function convertitoreValuteDKK() {
+
+        let EUR=0;
+        let DKK=0;
+        EUR=document.getElementById("dato1").value;
+
+        DKK= EUR * (1 / 7,44337)
+
+        alert("Valuta: "+DKK,"");
+
+        }
+
+        function convertitoreValuteGBP() {
+
+        let EUR=0;
+        let GBP=0;
+        EUR=document.getElementById("dato1").value;
+
+        GBP= EUR * (1 / 0,88516)
+
+        alert("Valuta: "+GBP,"");
+
+}
+
+    </script>
+</body>
+</html>
