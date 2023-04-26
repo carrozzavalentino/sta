@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"&gt;
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script&gt;
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script&gt;
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script&gt;
+
+
+    <title>Serie</title>
+
+    <style>
+      #box1{
+        background-color: lightgrey;
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+      }
+
+      #box2{
+        background-color: lightgrey;
+        width: 300px;
+        border: 15px solid green;
+        padding: 50px;
+        margin: 20px;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Serie</h2>
+     
+          <div class="form-group" id="box1">
+            <label for="dato1">R1</label>
+            <input type="text" class="form-control" id="dato1" name="dato1">
+
+            <label for="dato2">R2</label>
+            <input type="text" class="form-control" id="dato2" name="dato2">
+
+            <label for="dato3">R3</label>
+            <input type="text" class="form-control" id="dato3" name="dato3">
+
+            <label for="dato3">I</label>
+            <input type="text" class="form-control" id="dato3" name="dato4">
+
+            <label for="dato3">V</label>
+            <input type="text" class="form-control" id="dato3" name="dato5">
+
+            <label for="dato3">Rtot</label>
+            <input type="text" class="form-control" id="dato3" name="dato5">
+           
+          </div>
+
+          <button type="submit" onclick="calcolaOhm()" class="btn btn-primary">Calcola</button>
+          <div id="output">
+
+          <div class="container">
+            <h2>Parallele</h2>
+         
+              <div class="form-group" id="box1">
+                <label for="dato1">R1</label>
+                <input type="text" class="form-control" id="dato1" name="dato1">
+    
+                <label for="dato2">R2</label>
+                <input type="text" class="form-control" id="dato2" name="dato2">
+    
+                <label for="dato3">R3</label>
+                <input type="text" class="form-control" id="dato3" name="dato3">
+    
+                <label for="dato3">I</label>
+                <input type="text" class="form-control" id="dato3" name="dato4">
+    
+                <label for="dato3">V</label>
+                <input type="text" class="form-control" id="dato3" name="dato5">
+    
+                <label for="dato3">Rtot</label>
+                <input type="text" class="form-control" id="dato3" name="dato5">
+
+                <label for="dato3">11</label>
+                <input type="text" class="form-control" id="dato3" name="dato5">
+
+                <label for="dato3">12</label>
+                <input type="text" class="form-control" id="dato3" name="dato5">
+
+                <label for="dato3">13</label>
+                <input type="text" class="form-control" id="dato3" name="dato5">
+
+                <label for="dato3">Itotale</label>
+                <input type="text" class="form-control" id="dato3" name="dato5">
+               
+              </div>
+         
+          <button type="submit" onclick="calcolaOhm()" class="btn btn-primary">Calcola</button>
+          <div id="output">
+
+
+          </div>
+      </div>
+
+
+
+    <script>
+         function calcolaOhm() { 
+
+            let Vtot=0;
+            let diff=0;
+            let int=0
+            let disp=0
+            let V1=0;
+            let V2=0;
+            let V3=0
+            let Rtot=0
+            let R1=0;
+            let R2=0;
+            let R3=0
+            let Itot=0
+
+
+            diff=document.getElementById("dato1").value;
+ 
+            int=document.getElementById("dato2").value;
+
+            int=document.getElementById("dato3").value;
+
+            I= (diff / R)
+
+            alert("Uguale: "+int,"");
+
+            V= (R * int)
+
+            alert("Uguale: "+V,"");
+
+            R1 = (V / int)
+
+            alert("Uguale: "+R1,"");
+
+            R2 = (V / int)
+
+            alert("Uguale: "+R2,"");
+
+            R3 = (V / int)
+
+            alert("Uguale: "+R3,"");
+
+            Rtot = (R1 + R2 + R3)
+
+            alert("Uguale: "+Rtot,"");
+
+            Itot = (int * 3)
+
+            alert("Uguale: "+Itot,"");
+
+         }
+
+    </script>
+</body>
+</html>
