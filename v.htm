@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calcolatore Ohm</title>
+
+    </head>
+
+    <style>
+    div {
+    background-color: rgb(219, 245, 255);
+    width: 180px;
+    border: 5px solid rgb(119, 182, 255);
+    padding: 30px;
+    margin: 15px;
+    }
+
+    </style>
+    
+    <body>
+
+    <div class="container">
+    <h2>Calcolatore Ohm</h2>
+    <h3>Tensione</h3>
+     
+    <div class="form-group">
+    <label for="dato1">Resistenza</label>
+    <input type="text" class="form-control" id="dato1" name="dato1">
+
+    <label for="dato2">Intensità</label>
+    <input type="text" class="form-control" id="dato2" name="dato2">  
+    </div>
+         
+    <button type="submit" onclick="calcolatensione()" class="btn btn-primary">Calcola</button>
+    <div id="output">
+    </div>
+       
+    <h3>Resistenza</h3>  
+    <div class="form-group">
+    <label for="dato3">Tensione</label>
+    <input type="text" class="form-control" id="dato3" name="dato3">
+
+    <label for="dato4">Intensità</label>
+    <input type="text" class="form-control" id="dato4" name="dato4">
+    </div>
+
+    <button type="submit" onclick="calcoloresistenza()" class="btn btn-primary">Calcola</button>
+    <div id="output">
+    </div>
+
+    <h3>Intensità</h3>
+    <div class="form-group">
+    <label for="dato5">Tensione</label>
+    <input type="text" class="form-control" id="dato5" name="dato5">
+   
+    <label for="dato6">Resistenza</label>
+    <input type="text" class="form-control" id="dato6" name="dato6">
+    </div>
+    <button type="submit" onclick="calcolointensità()" class="btn btn-primary">Calcola</button>
+    <div id="output">
+    </div>
+    <script>
+
+    function calcolatensione() {
+    let Volt=0;
+    R=document.getElementById("dato1").value;
+    I=document.getElementById("dato2").value;
+    Volt= (R * I)
+    alert("Tensione "+Volt+"");
+    }
+         
+    function calcoloresistenza(){
+    let R=0;
+    V=document.getElementById("dato3").value;
+    I=document.getElementById("dato4").value;
+    R= (V / I)
+    alert("Resistenza "+R+"");
+    }
+ 
+    function calcolointensità(){
+    let I=0;
+    V=document.getElementById("dato5").value;
+    R=document.getElementById("dato6").value;
+    I= (V / R)
+    alert("Intensità "+I+"")
+    }
+
+</script>
+</body>
+</html>
